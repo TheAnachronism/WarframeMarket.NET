@@ -4,8 +4,7 @@ namespace WarframeMarketNET.Responses;
 
 internal class ResponseWrapper<T>
 {
-    inter
     
     [JsonPropertyName("payload")]
-    public T Payload { get; set; }
+    public T? Payload { get; set; }
 }

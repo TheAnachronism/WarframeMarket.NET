@@ -11,4 +11,4 @@ var services = collection.BuildServiceProvider();
 
 var client = services.GetRequiredService<IWarframeMarketApiClient>();
 
-var result = await client.GetAlItems();
+var item = await client.GetItemAsync("mirage_prime_systems");

@@ -4,5 +4,6 @@ namespace WarframeMarketNET.Contracts;
 
 public interface IWarframeMarketApiClient
 {
-    Task<IEnumerable<GetAllItemsResponse>> GetAlItems(CancellationToken ct = default);
+    Task<GetAllItemsResponse> GetAlItemsAsync(CancellationToken ct = default);
+    Task<GetItemResponse> GetItemAsync(string urlName, CancellationToken cancellationToken = default);
 }
