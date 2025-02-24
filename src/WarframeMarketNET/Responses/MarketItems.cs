@@ -71,14 +71,13 @@ public class ItemInSet(
     [JsonPropertyName("url_name")] public string UrlName { get; init; } = urlName;
     [JsonPropertyName("sub_icon")] public string? SubIcon { get; init; } = subIcon;
     [JsonPropertyName("set_root")] public bool SetRoot { get; init; } = setRoot;
-    [JsonPropertyName("thumb")]
-    public string Thumbnail { get; init; } = thumbnail;
+    [JsonPropertyName("thumb")] public string Thumbnail { get; init; } = thumbnail;
     [JsonPropertyName("icon_format")] public string IconFormat { get; init; } = iconFormat;
     public string Icon { get; init; } = icon;
     public string[] Tags { get; init; } = tags;
 
     public void Deconstruct(out int masteryLevel, out string id, out int ducats, out int tradingTax,
-        out int quantityForSet, out string urlName, out string subIcon, out bool setRoot, out string thumbnail,
+        out int quantityForSet, out string urlName, out string? subIcon, out bool setRoot, out string thumbnail,
         out string iconFormat, out string icon, out string[] tags)
     {
         masteryLevel = this.MasteryLevel;
